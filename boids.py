@@ -120,6 +120,8 @@ def main():
     pygame.display.set_caption('Boids')
 
     Boid.images = [load_image('boid.png')]
+    icon = pygame.transform.scale(Boid.images[0], (32, 32))
+    pygame.display.set_icon(icon)
 
     boids = pygame.sprite.Group()
     Boid.container = boids
